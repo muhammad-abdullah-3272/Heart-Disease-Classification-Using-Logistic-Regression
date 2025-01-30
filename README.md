@@ -22,9 +22,9 @@ This project aims to classify patients with heart disease using Logistic Regress
 1. **Data Wrangling**: Convert categorical strings (e.g., `M/F`, `ATA/NAP/ASY`) to integers.
 2. **Feature Scaling**: Applied min-max normalization:
    
-$$
+```math
 \text{scaled\_value} = 2 \times \frac{\text{value} - \min}{\max - \min} - 1
-$$
+```
    
 3. **Dataset Split**: Randomized into training (60%), validation (20%), and test (20%).
 
