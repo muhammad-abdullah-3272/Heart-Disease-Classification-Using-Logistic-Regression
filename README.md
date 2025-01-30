@@ -22,29 +22,29 @@ This project aims to classify patients with heart disease using Logistic Regress
 1. **Data Wrangling**: Convert categorical strings (e.g., `M/F`, `ATA/NAP/ASY`) to integers.
 2. **Feature Scaling**: Applied min-max normalization:
    
-   \[
-   \text{scaled\_value} = 2 \times \frac{\text{value} - \min}{\max - \min} - 1
-   \]
+$$
+\text{scaled\_value} = 2 \times \frac{\text{value} - \min}{\max - \min} - 1
+$$
    
 3. **Dataset Split**: Randomized into training (60%), validation (20%), and test (20%).
 
 ### 2. Model Selection
 1. **Polynomial Features**: Tested degrees 1–12. Selected **2nd degree** for balancing underfitting/overfitting.
-2. **Regularization**: Evaluated \(\lambda\) values \(0, 0.01, 0.1, 1, 10, 100\). Optimal \(\lambda = 0.1\).
+2. **Regularization**: $$Evaluated \(\lambda\) values \(0, 0.01, 0.1, 1, 10, 100\). Optimal \(\lambda = 0.1\).$$
 3. **Hypothesis Function**:
    
-   \[
-   h_\theta(x) = \theta_0 + \theta_1x_1 + \theta_2x_2 + \dots + \theta_{22}x_{11}^2
-   \]
+$$
+h_\theta(x) = \theta_0 + \theta_1x_1 + \theta_2x_2 + \dots + \theta_{22}x_{11}^2
+$$
    
 ### 3. Training
-1. **Algorithm**: Gradient Descent with learning rate \(\alpha = 0.03\).
+1. **Algorithm**: Gradient Descent with learning rate $$\(\alpha = 0.03\)$$.
 2. **Iterations**: 10,000 epochs (early stopping at ~2,500 iterations based on validation loss).
 3. **Cost Function**: Regularized logistic loss:
    
-   \[
-   J(\theta) = -\frac{1}{m} \sum \left[ y \log(h_\theta(x)) + (1-y) \log(1-h_\theta(x)) \right] + \frac{\lambda}{2m} \sum \theta_j^2
-   \]
+$$
+J(\theta) = -\frac{1}{m} \sum \left[ y \log(h_\theta(x)) + (1-y) \log(1-h_\theta(x)) \right] + \frac{\lambda}{2m} \sum \theta_j^2
+$$
 
 ---
 
