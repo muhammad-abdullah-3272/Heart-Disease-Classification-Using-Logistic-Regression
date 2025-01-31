@@ -1,8 +1,9 @@
-# Heart Disease Classification using Logistic Regression
+# Heart Disease Classification using Logistic Regression From Scratch
 
 ## Overview
 This project aims to classify patients with heart disease using Logistic Regression. The model analyzes 11 patient features to predict the presence of heart disease. Key steps include data preprocessing, feature engineering, model selection with polynomial degrees and regularization, and evaluation on training, validation, and test datasets. The final model achieves **~87% accuracy** on unseen data.
 
+> **Note:** This is a **from-scratch implementation**, meaning no pre-built libraries like TensorFlow or PyTorch were used for model training. 
 ---
 
 ## Dataset Details
